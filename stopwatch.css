@@ -1,0 +1,126 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    margin: 0;
+}
+
+.stopwatch {
+    text-align: center;
+}
+
+#analog-watch {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px auto;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.hand {
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hour-hand {
+    height: 4px;
+    background: #f00;
+}
+
+.minute-hand {
+    height: 3px;
+    background: #0f0;
+}
+
+.second-hand {
+    height: 2px;
+    background: #00f;
+}
+
+.center-point {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#display {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #444;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: #888;
+}
+
+#laps {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+    color: white;
+}
+
+#laps li {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #444;
+    border: 1px solid #888;
+    border-radius: 5px;
+}
+body {
+    background: linear-gradient(-45deg, #ee52ad, #c2e73c, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
